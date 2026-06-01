@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gonblu — Proyectos</title>
+    <title>Suite Gon — Proyectos</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -383,25 +383,52 @@
         .cta-arrow { transition: transform .3s; }
         .pcard:hover .cta-arrow { transform: translateX(4px); }
 
-        /* Coming soon */
+        /* Contact card */
         .card-soon {
-            border: 1px dashed rgba(139,92,246,0.2);
+            border: 1px solid rgba(139,92,246,0.35);
             border-radius: 24px;
             min-height: 280px;
             display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px;
             text-align: center; padding: 40px;
-            background: rgba(255,255,255,0.01);
+            background: linear-gradient(135deg, rgba(109,40,217,0.1) 0%, rgba(219,39,119,0.07) 100%);
+            position: relative; overflow: hidden;
+            transition: border-color .4s, background .4s, transform .4s;
+            cursor: default;
+        }
+        .card-soon::before {
+            content: '';
+            position: absolute; top: 0; left: 0; right: 0; height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(167,139,250,0.7), transparent);
+        }
+        .card-soon::after {
+            content: '';
+            position: absolute;
+            width: 200px; height: 200px; border-radius: 50%;
+            background: rgba(109,40,217,0.12);
+            filter: blur(60px);
+            top: 50%; left: 50%; transform: translate(-50%,-50%);
+            pointer-events: none;
         }
         .soon-ring {
-            width: 54px; height: 54px; border-radius: 50%;
-            border: 1px dashed rgba(139,92,246,0.3);
+            width: 58px; height: 58px; border-radius: 50%;
+            border: 1px solid rgba(167,139,250,0.45);
+            background: rgba(124,58,237,0.12);
             display: flex; align-items: center; justify-content: center;
-            font-size: 22px; margin-bottom: 8px;
+            font-size: 24px; margin-bottom: 8px;
             animation: rotateSlow 12s linear infinite;
+            position: relative; z-index: 1;
         }
         @keyframes rotateSlow { to { transform: rotate(360deg); } }
-        .soon-t { font-size: 16px; font-weight: 600; color: rgba(255,255,255,0.28); }
-        .soon-s { font-size: 13px; color: rgba(255,255,255,0.14); }
+        .soon-t { font-size: 18px; font-weight: 700; color: rgba(255,255,255,0.85); position: relative; z-index: 1; }
+        .soon-s { font-size: 13px; color: rgba(255,255,255,0.45); line-height: 1.7; position: relative; z-index: 1; }
+        .soon-cta {
+            margin-top: 8px;
+            display: inline-block;
+            font-size: 12px; font-weight: 600;
+            color: #a78bfa;
+            letter-spacing: .06em;
+            position: relative; z-index: 1;
+        }
 
         /* ══════════════════════════════
            STATS
@@ -474,7 +501,7 @@
     <nav>
         <a href="#" class="logo">
             <div class="logo-gem">G</div>
-            <span class="logo-name">Gonblu</span>
+            <span class="logo-name">Suite Gon</span>
         </a>
         <div class="nav-pill">
             <a href="#proyectos">Proyectos</a>
@@ -606,35 +633,8 @@
 
             <div class="cards">
 
-                <!-- EstudIArte -->
-                <a href="https://gonblu.github.io/estudiarte/" target="_blank" class="pcard reveal" style="transition-delay:.12s">
-                    <div class="pcard-glow" style="background:#7c3aed;"></div>
-                    <div class="pcard-header">
-                        <div class="pcard-icon" style="background:rgba(124,58,237,0.15);border:1px solid rgba(124,58,237,0.3);">🎓</div>
-                        <div class="pcard-tags">
-                            <span class="ptag" style="background:rgba(124,58,237,0.12);border:1px solid rgba(124,58,237,0.3);color:#c4b5fd;">IA</span>
-                            <span class="ptag" style="background:rgba(124,58,237,0.12);border:1px solid rgba(124,58,237,0.3);color:#c4b5fd;">Educación</span>
-                        </div>
-                    </div>
-                    <div class="pcard-name">EstudIArte</div>
-                    <p class="pcard-desc">
-                        Software de estudio con inteligencia artificial. Subí tus apuntes y transformalos en resúmenes, preguntas de examen, flashcards y mapas conceptuales.
-                    </p>
-                    <div class="pcard-pills">
-                        <span class="ppill">Resúmenes</span>
-                        <span class="ppill">Flashcards</span>
-                        <span class="ppill">Preguntas de examen</span>
-                        <span class="ppill">Mapas conceptuales</span>
-                        <span class="ppill">Tutor IA</span>
-                    </div>
-                    <span class="pcard-cta" style="color:#a78bfa;">
-                        Ver Solución
-                        <span class="cta-arrow">→</span>
-                    </span>
-                </a>
-
                 <!-- Núcleo -->
-                <a href="https://gonblu.github.io/nucleo/" target="_blank" class="pcard reveal" style="transition-delay:.22s">
+                <a href="https://gonblu.github.io/nucleo/" target="_blank" class="pcard reveal" style="transition-delay:.12s">
                     <div class="pcard-glow" style="background:#be185d;"></div>
                     <div class="pcard-header">
                         <div class="pcard-icon" style="background:rgba(190,24,93,0.12);border:1px solid rgba(219,39,119,0.3);">⚡</div>
@@ -661,7 +661,7 @@
                 </a>
 
                 <!-- Vista360 -->
-                <a href="https://gonblu.github.io/vista360/" target="_blank" class="pcard reveal" style="transition-delay:.32s">
+                <a href="https://gonblu.github.io/vista360/" target="_blank" class="pcard reveal" style="transition-delay:.22s">
                     <div class="pcard-glow" style="background:#0e7490;"></div>
                     <div class="pcard-header">
                         <div class="pcard-icon" style="background:rgba(6,182,212,0.12);border:1px solid rgba(6,182,212,0.3);">🌐</div>
@@ -688,7 +688,7 @@
                 </a>
 
                 <!-- Syncro -->
-                <a href="https://gonblu.github.io/Syncro/" target="_blank" class="pcard reveal" style="transition-delay:.42s">
+                <a href="https://gonblu.github.io/Syncro/" target="_blank" class="pcard reveal" style="transition-delay:.32s">
                     <div class="pcard-glow" style="background:#059669;"></div>
                     <div class="pcard-header">
                         <div class="pcard-icon" style="background:rgba(5,150,105,0.12);border:1px solid rgba(16,185,129,0.3);">📅</div>
@@ -715,7 +715,7 @@
                 </a>
 
                 <!-- Kursa -->
-                <a href="https://gonblu.github.io/kursa/" target="_blank" class="pcard reveal" style="transition-delay:.52s">
+                <a href="https://gonblu.github.io/kursa/" target="_blank" class="pcard reveal" style="transition-delay:.42s">
                     <div class="pcard-glow" style="background:#b45309;"></div>
                     <div class="pcard-header">
                         <div class="pcard-icon" style="background:rgba(245,158,11,0.12);border:1px solid rgba(245,158,11,0.3);">🎥</div>
@@ -742,7 +742,7 @@
                 </a>
 
                 <!-- Flow -->
-                <a href="https://gonblu.github.io/flow/" target="_blank" class="pcard reveal" style="transition-delay:.62s">
+                <a href="https://gonblu.github.io/flow/" target="_blank" class="pcard reveal" style="transition-delay:.52s">
                     <div class="pcard-glow" style="background:#1d4ed8;"></div>
                     <div class="pcard-header">
                         <div class="pcard-icon" style="background:rgba(59,130,246,0.12);border:1px solid rgba(59,130,246,0.3);">🚀</div>
@@ -768,6 +768,94 @@
                     </span>
                 </a>
 
+                <!-- Provix -->
+                <a href="https://gonblu.github.io/provix/" target="_blank" class="pcard reveal" style="transition-delay:.62s">
+                    <div class="pcard-glow" style="background:#c2410c;"></div>
+                    <div class="pcard-header">
+                        <div class="pcard-icon" style="background:rgba(234,88,12,0.12);border:1px solid rgba(234,88,12,0.3);">📦</div>
+                        <div class="pcard-tags">
+                            <span class="ptag" style="background:rgba(234,88,12,0.1);border:1px solid rgba(234,88,12,0.3);color:#fdba74;">Insumos</span>
+                            <span class="ptag" style="background:rgba(234,88,12,0.1);border:1px solid rgba(234,88,12,0.3);color:#fdba74;">Stock</span>
+                        </div>
+                    </div>
+                    <div class="pcard-name">Provix</div>
+                    <p class="pcard-desc">
+                        Sistema de pedidos y proveeduría interna. Centraliza las solicitudes de insumos y materiales, controla el stock automáticamente y deja cada movimiento registrado y rastreable.
+                    </p>
+                    <div class="pcard-pills">
+                        <span class="ppill">Pedidos internos</span>
+                        <span class="ppill">Gestión de stock</span>
+                        <span class="ppill">Roles y permisos</span>
+                        <span class="ppill">Alertas stock mínimo</span>
+                        <span class="ppill">Reportes</span>
+                    </div>
+                    <span class="pcard-cta" style="color:#fdba74;">
+                        Ver Solución
+                        <span class="cta-arrow">→</span>
+                    </span>
+                </a>
+
+                <!-- Logix -->
+                <a href="https://gonblu.github.io/logix/" target="_blank" class="pcard reveal" style="transition-delay:.72s">
+                    <div class="pcard-glow" style="background:#075985;"></div>
+                    <div class="pcard-header">
+                        <div class="pcard-icon" style="background:rgba(14,165,233,0.12);border:1px solid rgba(14,165,233,0.3);">💻</div>
+                        <div class="pcard-tags">
+                            <span class="ptag" style="background:rgba(14,165,233,0.1);border:1px solid rgba(14,165,233,0.3);color:#7dd3fc;">IT</span>
+                            <span class="ptag" style="background:rgba(14,165,233,0.1);border:1px solid rgba(14,165,233,0.3);color:#7dd3fc;">Inventario</span>
+                        </div>
+                    </div>
+                    <div class="pcard-name">Logix</div>
+                    <p class="pcard-desc">
+                        Software de inventario IT para equipos de tecnología. Centralizá equipos, planos de planta y racks de datacenter en una interfaz visual que elimina las planillas dispersas.
+                    </p>
+                    <div class="pcard-pills">
+                        <span class="ppill">Inventario TI</span>
+                        <span class="ppill">Planos interactivos</span>
+                        <span class="ppill">Racks datacenter</span>
+                        <span class="ppill">Dashboard en vivo</span>
+                        <span class="ppill">Exportar reportes</span>
+                    </div>
+                    <span class="pcard-cta" style="color:#7dd3fc;">
+                        Ver Solución
+                        <span class="cta-arrow">→</span>
+                    </span>
+                </a>
+
+                <!-- EstudIArte -->
+                <a href="https://gonblu.github.io/estudiarte/" target="_blank" class="pcard reveal" style="transition-delay:.82s">
+                    <div class="pcard-glow" style="background:#7c3aed;"></div>
+                    <div class="pcard-header">
+                        <div class="pcard-icon" style="background:rgba(124,58,237,0.15);border:1px solid rgba(124,58,237,0.3);">🎓</div>
+                        <div class="pcard-tags">
+                            <span class="ptag" style="background:rgba(124,58,237,0.12);border:1px solid rgba(124,58,237,0.3);color:#c4b5fd;">IA</span>
+                            <span class="ptag" style="background:rgba(124,58,237,0.12);border:1px solid rgba(124,58,237,0.3);color:#c4b5fd;">Educación</span>
+                        </div>
+                    </div>
+                    <div class="pcard-name">EstudIArte</div>
+                    <p class="pcard-desc">
+                        Software de estudio con inteligencia artificial. Subí tus apuntes y transformalos en resúmenes, preguntas de examen, flashcards y mapas conceptuales.
+                    </p>
+                    <div class="pcard-pills">
+                        <span class="ppill">Resúmenes</span>
+                        <span class="ppill">Flashcards</span>
+                        <span class="ppill">Preguntas de examen</span>
+                        <span class="ppill">Mapas conceptuales</span>
+                        <span class="ppill">Tutor IA</span>
+                    </div>
+                    <span class="pcard-cta" style="color:#a78bfa;">
+                        Ver Solución
+                        <span class="cta-arrow">→</span>
+                    </span>
+                </a>
+
+                <!-- ¿Necesitás algo distinto? -->
+                <div class="card-soon reveal" style="transition-delay:.92s;">
+                    <div class="soon-ring">💬</div>
+                    <div class="soon-t">¿Necesitás algo distinto?</div>
+                    <div class="soon-s">Si necesitás un programa que no está acá,<br>avisame y vemos si lo podemos hacer.</div>
+                    <span class="soon-cta">Escribime →</span>
+                </div>
 
             </div>
         </div>
@@ -777,7 +865,7 @@
     <div class="stats-bar">
         <div class="stats-inner">
             <div class="stat reveal">
-                <div class="stat-n">6</div>
+                <div class="stat-n">8</div>
                 <div class="stat-l">Funcionando</div>
             </div>
             <div class="stat reveal" style="transition-delay:.1s">
@@ -795,7 +883,7 @@
     <footer id="contacto">
         <a href="#" class="logo">
             <div class="logo-gem">G</div>
-            <span class="logo-name">Gonblu</span>
+            <span class="logo-name">Suite Gon</span>
         </a>
         <div class="footer-r">Más proyectos próximamente — 2025</div>
     </footer>
