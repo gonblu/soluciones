@@ -58,11 +58,13 @@
         }
         .logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
         .logo-gem {
-            width: 36px; height: 36px; border-radius: 10px;
+            width: 40px; height: 40px; border-radius: 10px;
             background: linear-gradient(135deg, #7c3aed, #db2777);
             display: flex; align-items: center; justify-content: center;
-            font-weight: 800; font-size: 15px; color: #fff;
+            font-weight: 800; font-size: 17px; color: #fff;
             box-shadow: 0 0 24px rgba(124,58,237,0.5);
+            flex-shrink: 0;
+            overflow: visible;
         }
         .logo-name { font-weight: 700; font-size: 16px; letter-spacing: -0.4px; color: rgba(255,255,255,0.9); }
         .nav-pill {
@@ -560,7 +562,7 @@
         <div class="floating-badge fb-6">
             <span class="badge-icon">🚀</span>
             <div class="badge-label">
-                <strong>Flow</strong>
+                <strong>Orbita</strong>
                 Gestión para agencias
             </div>
         </div>
@@ -751,7 +753,7 @@
                             <span class="ptag" style="background:rgba(59,130,246,0.1);border:1px solid rgba(59,130,246,0.3);color:#93c5fd;">Proyectos</span>
                         </div>
                     </div>
-                    <div class="pcard-name">Flow</div>
+                    <div class="pcard-name">Orbita</div>
                     <p class="pcard-desc">
                         Software de gestión (todo en uno) para agencias y startups. Unifica tareas, proyectos, ventas, presupuestos, finanzas y equipo en una sola plataforma.
                     </p>
@@ -903,8 +905,35 @@
                     </span>
                 </a>
 
+                <!-- Pulga -->
+                <a href="https://gonblu.github.io/pulga/" target="_blank" class="pcard reveal" style="transition-delay:1.12s">
+                    <div class="pcard-glow" style="background:#166534;"></div>
+                    <div class="pcard-header">
+                        <div class="pcard-icon" style="background:rgba(22,163,74,0.12);border:1px solid rgba(22,163,74,0.3);">💰</div>
+                        <div class="pcard-tags">
+                            <span class="ptag" style="background:rgba(22,163,74,0.1);border:1px solid rgba(22,163,74,0.3);color:#86efac;">Finanzas</span>
+                            <span class="ptag" style="background:rgba(22,163,74,0.1);border:1px solid rgba(22,163,74,0.3);color:#86efac;">Personal</span>
+                        </div>
+                    </div>
+                    <div class="pcard-name">Pulga</div>
+                    <p class="pcard-desc">
+                        Software de finanzas personales. Registrá ingresos y gastos, visualizá tu salud financiera con reportes avanzados y exportá tus datos en Excel o PDF con un solo clic.
+                    </p>
+                    <div class="pcard-pills">
+                        <span class="ppill">Dashboard</span>
+                        <span class="ppill">Ingresos</span>
+                        <span class="ppill">Gastos</span>
+                        <span class="ppill">Categorías</span>
+                        <span class="ppill">Exportar Excel/PDF</span>
+                    </div>
+                    <span class="pcard-cta" style="color:#86efac;">
+                        Ver Solución
+                        <span class="cta-arrow">→</span>
+                    </span>
+                </a>
+
                 <!-- ¿Necesitás algo distinto? -->
-                <div class="card-soon reveal" style="transition-delay:1.12s;">
+                <div class="card-soon reveal" style="transition-delay:1.22s;">
                     <div class="soon-ring">💬</div>
                     <div class="soon-t">¿Necesitás algo distinto?</div>
                     <div class="soon-s">Si necesitás un programa que no está acá,<br>avisame y vemos si lo podemos hacer.</div>
@@ -919,7 +948,7 @@
     <div class="stats-bar">
         <div class="stats-inner">
             <div class="stat reveal">
-                <div class="stat-n">10</div>
+                <div class="stat-n">11</div>
                 <div class="stat-l">Funcionando</div>
             </div>
             <div class="stat reveal" style="transition-delay:.1s">
